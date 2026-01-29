@@ -1,6 +1,12 @@
-# stripeeventrouter
+# Stripe Webhook Events Router
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/gurre/stripeeventrouter.svg)](https://pkg.go.dev/github.com/gurre/stripeeventrouter)
+
+## Problem
+
+Processing Stripe webhooks in Go often leads to a single large `switch` on event type. As you add support for more events, that switch grows and becomes hard to read and maintain. This package replaces the switch with a router: you register one handler per event type (or per group of types), and the router dispatches each event to the right handler.
+
+## Solution
 
 Routes Stripe webhook events to registered handlers by event type. Handlers are type-safe: you receive `*stripe.PaymentIntent`, `*stripe.Charge`, and other Stripe types instead of raw JSON. The router is safe for concurrent use and works with events produced by Stripe’s `webhook.ConstructEvent`.
 
