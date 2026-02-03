@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/stripe/stripe-go/v82"
+	"github.com/stripe/stripe-go/v84"
 )
 
 // handlerWrapper is an interface that wraps a handler function with unmarshaling

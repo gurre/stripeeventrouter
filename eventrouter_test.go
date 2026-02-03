@@ -7,7 +7,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/stripe/stripe-go/v82"
+	"github.com/stripe/stripe-go/v84"
 )
 
 // mockEvent creates a mock Stripe event with the given type and data
